@@ -1,7 +1,7 @@
 
 |nom x y one|
 
-proc putChips: n andBalloons: m andRocks: 3 [ 
+proc putChips: n andBalloons: m andRocks: r [ 
     |c b| 
     c := n .
     b := m .
@@ -20,4 +20,13 @@ proc goWest [
     goWest .
 
     nom := 57.
+]
+
+proc tryMove: n[
+while :canMove: n inDir:#east . 
+do: [move: n inDir: #east .]
+]
+
+[
+        tryMove: 2 .
 ]
